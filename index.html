@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081514" />
+    <meta name="description" content="月下彼岸，花开无声。一个关于彼岸花的交互式数字花境。" />
+    <title>彼岸 · THE OTHER SHORE</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <main id="experience">
+      <div id="scene" role="img" aria-label="月光下，红色彼岸花在水岸轻轻摇曳"></div>
+      <div class="scene-shade" aria-hidden="true"></div>
+      <header class="site-header chrome">
+        <a class="wordmark" href="#" aria-label="彼岸首页"><span class="seal">彼</span><span>彼岸<span class="wordmark-en">THE OTHER SHORE</span></span></a>
+        <div class="header-right"><span class="edition">花境 · 壹</span><button class="icon-button" id="sound-button" aria-label="开启环境音" aria-pressed="false" data-tooltip="环境音"><i data-lucide="volume-x"></i></button><button class="icon-button" id="fullscreen-button" aria-label="全屏" data-tooltip="全屏"><i data-lucide="maximize"></i></button></div>
+      </header>
+
+      <section class="title-block chrome" aria-labelledby="scene-title">
+        <h1 id="scene-title">彼岸花</h1>
+        <p class="latin-name">Lycoris radiata</p>
+        <div class="poem"><span>花开一千年，花落一千年。</span><span>花叶永不见，思念永不散。</span></div>
+        <button id="enter-button" class="enter-button"><span>入此花境</span><span class="enter-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+      </section>
+
+      <aside class="vertical-poem chrome" aria-hidden="true">此岸生念<span></span>彼岸花开</aside>
+      <div class="scene-caption chrome"><span class="caption-line"></span><span id="scene-caption">月照忘川，花开彼岸</span></div>
+
+      <footer class="scene-footer chrome">
+        <div class="scene-picker" role="group" aria-label="花境氛围">
+          <button class="scene-option active" data-mode="moon" aria-pressed="true"><span class="mode-dot moon-dot"></span><span>月下</span></button>
+          <button class="scene-option" data-mode="ember" aria-pressed="false"><span class="mode-dot ember-dot"></span><span>余烬</span></button>
+          <button class="scene-option" data-mode="mist" aria-pressed="false"><span class="mode-dot mist-dot"></span><span>入雾</span></button>
+        </div>
+        <span class="footer-label">一念之间 · 花开彼岸</span>
+        <div class="footer-tools"><button class="icon-button" id="pause-button" aria-label="暂停动态" aria-pressed="false" data-tooltip="暂停动态"><i data-lucide="pause"></i></button><button class="icon-button" id="capture-button" aria-label="保存此刻" data-tooltip="保存此刻"><i data-lucide="camera"></i></button></div>
+      </footer>
+      <button class="icon-button immersion-exit" id="exit-button" aria-label="退出沉浸模式" data-tooltip="退出花境"><i data-lucide="minimize-2"></i></button>
+      <div class="loading-state" id="loading-state" role="status"><span class="loading-flower"></span><span>花境渐醒</span></div>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div id="error-state" class="error-state" hidden><p>花境暂未展开</p><span>请开启浏览器的图形加速后重试。</span><button id="retry-button">重新载入</button></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
